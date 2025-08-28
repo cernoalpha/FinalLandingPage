@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, TrendingDown, TrendingUp } from "lucide-react";
+import { ArrowRight, TrendingDown, TrendingUp, Users, DollarSign, Briefcase, Building, MessageCircle } from "lucide-react";
 import React from "react";
 
 const companyLogos = [
@@ -36,7 +36,7 @@ export function HeroSection() {
             {/* Floating UI cards positioned within the gradient area */}
             <div className="absolute inset-0 pointer-events-none">
               {/* Financial metrics card - aligned with first border */}
-              <div className="absolute top-[30%] right-56">
+              <div className="absolute top-[25%] right-56">
                 <div className="relative">
                   {/* Horizontal connecting line to sidebar */}
                   <div className="absolute -right-24 top-1/2 w-24 h-px bg-gradient-to-l from-transparent to-[#0f4f48]"></div>
@@ -44,10 +44,18 @@ export function HeroSection() {
                   <div className="absolute left-1/2 top-full w-px h-32 bg-gradient-to-b from-[#0f4f48] to-transparent"></div>
                   <Card className="w-40 bg-white rounded-md border border-gray-200 shadow-lg">
                     <CardContent className="p-3">
-                      <div className="space-y-1">
+                      <div className="space-y-2">
                         <div className="flex items-center gap-1 px-2 py-1 bg-[#0f4f48]/20 rounded text-xs text-black">
                           ICP MATCH
                           <TrendingUp className="w-3 h-3" />
+                        </div>
+                        <div className="flex items-center gap-1 px-2 py-1 bg-green-100 rounded text-xs text-black">
+                          Recently Funded
+                          <DollarSign className="w-3 h-3" />
+                        </div>
+                        <div className="flex items-center gap-1 px-2 py-1 bg-blue-100 rounded text-xs text-black">
+                          3 Open Roles
+                          <Users className="w-3 h-3" />
                         </div>
                       </div>
                     </CardContent>
@@ -64,11 +72,21 @@ export function HeroSection() {
                   <div className="absolute left-1/2 top-full w-px h-24 bg-gradient-to-b from-[#0f4f48] to-transparent"></div>
                   <Card className="bg-white rounded-md border border-gray-200 shadow-lg">
                     <CardContent className="p-2">
-                      <div className="text-xs text-gray-600 mb-1">
+                      <div className="text-xs text-gray-600 mb-2">
                         Custom Signals
                       </div>
-                      <div className="bg-[#ffb84e]/20 px-2 py-1 rounded text-xs text-black">
-                        Likes Books
+                      <div className="space-y-2">
+                        <div className="bg-[#ffb84e]/20 px-2 py-1 rounded text-xs text-black flex items-center gap-1">
+                          Likes Books
+                        </div>
+                        <div className="bg-purple-100 px-2 py-1 rounded text-xs text-black flex items-center gap-1">
+                          <Briefcase className="w-3 h-3" />
+                          CTO New Hire
+                        </div>
+                        <div className="bg-orange-100 px-2 py-1 rounded text-xs text-black flex items-center gap-1">
+                          <Building className="w-3 h-3" />
+                          Expansion
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
@@ -84,9 +102,15 @@ export function HeroSection() {
                   <div className="absolute left-1/2 top-full w-px h-24 bg-gradient-to-b from-[#0f4f48] to-transparent"></div>
                   <Card className="bg-white rounded-md border border-gray-200 shadow-lg">
                     <CardContent className="p-2">
-                      <div className="bg-[#ff3c11]/20 px-2 py-1 rounded flex items-center gap-1 w-fit">
-                        <span className="text-xs text-black">CTO under 35</span>
-                        <TrendingDown className="w-2 h-2" />
+                      <div className="space-y-2">
+                        <div className="bg-[#ff3c11]/20 px-2 py-1 rounded flex items-center gap-1 w-fit">
+                          <span className="text-xs text-black">CTO under 35</span>
+                          <TrendingDown className="w-2 h-2" />
+                        </div>
+                        <div className="bg-yellow-100 px-2 py-1 rounded flex items-center gap-1 w-fit">
+                          <MessageCircle className="w-3 h-3" />
+                          <span className="text-xs text-black">Pain Point</span>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
