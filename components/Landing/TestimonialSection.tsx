@@ -206,10 +206,10 @@ export function TestimonialSection(): JSX.Element {
     offset: ["start end", "end start"],
   });
 
-  // Curtains now close later (0.9–1) to give more reading time
+  // Curtains open later (0.15) after previous section, close earlier (0.8) before CTA
   const curtainScale = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.9, 1],
+    [0, 0.15, 0.8, 0.85],
     [0, 1, 1, 0]
   );
 
@@ -266,11 +266,11 @@ export function TestimonialSection(): JSX.Element {
       {/* Curtains */}
       <div className="fixed inset-0 z-0">
         <motion.div
-          className="absolute top-0 left-0 w-1/2 h-full bg-yellow-400"
+          className="absolute top-0 left-0 w-1/2 h-full bg-amber-500"
           style={{ scaleX: curtainScale, transformOrigin: "right center" }}
         />
         <motion.div
-          className="absolute top-0 right-0 w-1/2 h-full bg-yellow-400"
+          className="absolute top-0 right-0 w-1/2 h-full bg-yellow-500"
           style={{ scaleX: curtainScale, transformOrigin: "left center" }}
         />
       </div>

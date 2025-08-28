@@ -1,9 +1,9 @@
 import React from "react";
-import { Header } from "@/components/Header";
-import { FeatureLayoutSection } from "@/components/FeatureLayoutSection";
-import { HeroSection } from "@/components/HeroSection";
-import { TestimonialSection } from "@/components/TestimonialSection";
-import { CallToActionSection } from "@/components/CallToActionSection";
+import { Header } from "@/components/Landing/Header";
+import { FeatureLayoutSection } from "@/components/Landing/FeatureLayoutSection";
+import { HeroSection } from "@/components/Landing/HeroSection";
+import { TestimonialSection } from "@/components/Landing/TestimonialSection";
+import { CallToActionSection } from "@/components/Landing/CallToActionSection";
 
 const HomePage = (): JSX.Element => {
   return (
