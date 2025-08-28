@@ -14,18 +14,18 @@ export function CallToActionSection(): JSX.Element {
   ];
 
   return (
-    <section className="relative w-full py-16">
-      <div className="relative w-full min-h-[500px]">
+    <section className="relative w-full pb-6">
+      <div className="relative w-full min-h-[55vh] flex items-center justify-center">
         {/* Main CTA container with gradient */}
-        <div className="relative mx-auto max-w-6xl">
+        <div className="relative w-full max-w-7xl mx-auto px-8">
           <Card className="relative overflow-hidden border-none shadow-2xl">
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-300 via-orange-400 to-red-500" />
 
             {/* Content overlay */}
             <CardContent className="relative z-10 p-0">
-              <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+              <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[400px]">
                 {/* Left content section */}
-                <div className="flex flex-col justify-center p-8 lg:p-12">
+                <div className="flex flex-col justify-center p-12 lg:p-16">
                   {/* Badge */}
                   <Badge
                     variant="outline"
@@ -38,24 +38,24 @@ export function CallToActionSection(): JSX.Element {
                   </Badge>
 
                   {/* Main heading */}
-                  <h2 className="[font-family:'Inter-Medium',Helvetica] font-medium text-[#0f4f48] text-4xl lg:text-5xl leading-tight mb-6">
+                  <h2 className="[font-family:'Inter-Medium',Helvetica] font-medium text-[#0f4f48] text-5xl lg:text-6xl leading-tight mb-8">
                     Ready to transform your
                     <br />
                     broker accounting?
                   </h2>
 
                   {/* Description */}
-                  <p className="[font-family:'Inter-Regular',Helvetica] font-normal text-[#0f4f48] text-lg leading-relaxed mb-8 opacity-90">
+                  <p className="[font-family:'Inter-Regular',Helvetica] font-normal text-[#0f4f48] text-xl leading-relaxed mb-10 opacity-90">
                     Join thousands of brokers who have already revolutionized
                     their accounting processes with Comulate.
                   </p>
 
                   {/* Features list */}
-                  <div className="space-y-3 mb-8">
+                  <div className="space-y-4 mb-10">
                     {features.map((feature, index) => (
                       <div key={index} className="flex items-center gap-3">
-                        <CheckCircle className="w-5 h-5 text-[#0f4f48] flex-shrink-0" />
-                        <span className="[font-family:'Inter-Regular',Helvetica] font-normal text-[#0f4f48] text-base">
+                        <CheckCircle className="w-6 h-6 text-[#0f4f48] flex-shrink-0" />
+                        <span className="[font-family:'Inter-Regular',Helvetica] font-normal text-[#0f4f48] text-lg">
                           {feature}
                         </span>
                       </div>
@@ -64,14 +64,14 @@ export function CallToActionSection(): JSX.Element {
 
                   {/* CTA buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button className="bg-[#4adf7d] hover:bg-[#4adf7d]/90 text-[#0f4f48] shadow-[0px_1px_2px_#1018280d] h-12 px-6 rounded [font-family:'Inter-Medium',Helvetica] font-medium text-base tracking-[0] leading-6">
+                    <Button className="bg-[#4adf7d] hover:bg-[#4adf7d]/90 text-[#0f4f48] shadow-[0px_1px_2px_#1018280d] h-14 px-8 rounded [font-family:'Inter-Medium',Helvetica] font-medium text-lg tracking-[0] leading-6">
                       Access dashboard
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
 
                     <Button
                       variant="outline"
-                      className="bg-white/20 hover:bg-white/30 border-white/40 text-[#0f4f48] backdrop-blur-sm h-12 px-6 rounded [font-family:'Inter-Medium',Helvetica] font-medium text-base tracking-[0] leading-6"
+                      className="bg-white/20 hover:bg-white/30 border-white/40 text-[#0f4f48] backdrop-blur-sm h-14 px-8 rounded [font-family:'Inter-Medium',Helvetica] font-medium text-lg tracking-[0] leading-6"
                     >
                       Book demo
                     </Button>
@@ -79,7 +79,7 @@ export function CallToActionSection(): JSX.Element {
                 </div>
 
                 {/* Right visual section */}
-                <div className="relative flex items-center justify-center p-8 lg:p-12">
+                <div className="relative flex items-center justify-center p-12 lg:p-16">
                   {/* Floating cards for visual interest */}
                   <div className="relative w-full max-w-sm">
                     {/* Main dashboard card */}
