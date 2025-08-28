@@ -292,7 +292,7 @@ export function TestimonialSection(): JSX.Element {
           transform: "translate(-50%, -50%)",
         }}
       >
-        <div className="relative w-[600px] h-[400px]" style={{ perspective: "1500px" }}>
+        <div className="relative w-[700px] h-[320px]" style={{ perspective: "1500px" }}>
           {cards.map((card, index) => (
             <motion.div
               key={index}
@@ -307,11 +307,11 @@ export function TestimonialSection(): JSX.Element {
               }}
             >
               <Card className="w-full h-full bg-white border-2 border-amber-900/60 shadow-2xl" style={{ filter: `drop-shadow(0 ${4 + cardTilts[index].depth / 2}px ${8 + cardTilts[index].depth}px rgba(255,195,0,0.3)) drop-shadow(0 ${2 + cardTilts[index].depth / 4}px ${4 + cardTilts[index].depth / 2}px rgba(0,0,0,0.1))` }}>
-                <CardContent className="flex flex-col justify-start items-start p-8 h-full">
-                  <h3 className="font-semibold text-lg text-[#0f4f48] mb-4">
+                <CardContent className="flex flex-col justify-between items-start p-6 h-full">
+                  <h3 className="font-semibold text-2xl text-[#0f4f48] mb-3 leading-tight">
                     {card.heading}
                   </h3>
-                  <p className="font-medium text-base text-[#0f4f48] leading-relaxed">
+                  <p className="font-medium text-xl text-[#0f4f48] leading-relaxed flex-1 flex items-center">
                     {card.quote}
                   </p>
                 </CardContent>
