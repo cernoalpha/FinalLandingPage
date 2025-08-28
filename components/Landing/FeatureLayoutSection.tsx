@@ -23,11 +23,6 @@ const firstParagraphData: { line: number; words: WordData[] }[] = [
       { text: "with", animated: false },
       { text: "manual,", animated: false },
       { text: "slow,", animated: false },
-    ],
-  },
-  {
-    line: 2,
-    words: [
       { text: "and", animated: false },
       { text: "generic", animated: false },
       { text: "outreach", animated: false },
@@ -35,12 +30,12 @@ const firstParagraphData: { line: number; words: WordData[] }[] = [
       { text: "misses", animated: false },
       { text: "the", animated: false },
       { text: "mark", animated: false },
-      { text: "and", animated: false },
     ],
   },
   {
-    line: 3,
+    line: 2,
     words: [
+      { text: "and", animated: false },
       { text: "fails", animated: false },
       { text: "to", animated: false },
       { text: "align", animated: false },
@@ -52,7 +47,7 @@ const firstParagraphData: { line: number; words: WordData[] }[] = [
     ],
   },
   {
-    line: 4,
+    line: 3,
     words: [
       { text: "UNTIL", animated: true, isSpecial: true },
       { text: "NOW.", animated: true, isSpecial: true },
@@ -205,7 +200,7 @@ export function FeatureLayoutSection() {
     >
       {/* Fixed container for animated text */}
       <motion.div
-        className="fixed left-1/2 top-1/4 z-10 w-full max-w-[716px] px-8"
+        className="fixed left-1/2 top-[15%] z-10 w-full max-w-4xl px-8"
         style={{
           opacity: containerOpacity,
           transform: "translateX(-50%)",
