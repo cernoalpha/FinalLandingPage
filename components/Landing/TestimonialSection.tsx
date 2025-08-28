@@ -305,7 +305,7 @@ export function TestimonialSection(): JSX.Element {
                 transformStyle: "preserve-3d",
               }}
             >
-              <Card className="w-full h-full bg-white border border-gray-300 shadow-lg" style={{ filter: `drop-shadow(0 ${4 + cardTilts[index].depth / 2}px ${8 + cardTilts[index].depth}px rgba(0,0,0,0.15))` }}>
+              <Card className="w-full h-full bg-white border-2 border-amber-900/60 shadow-2xl" style={{ filter: `drop-shadow(0 ${4 + cardTilts[index].depth / 2}px ${8 + cardTilts[index].depth}px rgba(255,195,0,0.3)) drop-shadow(0 ${2 + cardTilts[index].depth / 4}px ${4 + cardTilts[index].depth / 2}px rgba(0,0,0,0.1))` }}>
                 <CardContent className="flex flex-col justify-center items-center p-8 h-full">
                   <p className="font-medium text-xl text-[#0f4f48] text-center mb-4">
                     “{card.quote}”
