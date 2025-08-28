@@ -36,16 +36,22 @@ export function HeroSection() {
             {/* Floating UI cards positioned within the gradient area */}
             <div className="absolute inset-0 pointer-events-none">
               {/* Financial metrics card - top right */}
-              <Card className="absolute top-20 right-16 w-40 bg-white rounded-md border border-gray-200 shadow-lg">
-                <CardContent className="p-3">
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-1 px-2 py-1 bg-[#0f4f48]/20 rounded text-xs text-black">
-                      ICP MATCH
-                      <TrendingUp className="w-3 h-3" />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="absolute top-20 right-16">
+                <div className="relative">
+                  {/* Connecting line */}
+                  <div className="absolute -left-16 top-1/2 w-16 h-px bg-gradient-to-r from-transparent to-[#0f4f48]"></div>
+                  <Card className="w-40 bg-white rounded-md border border-gray-200 shadow-lg">
+                    <CardContent className="p-3">
+                      <div className="space-y-1">
+                        <div className="flex items-center gap-1 px-2 py-1 bg-[#0f4f48]/20 rounded text-xs text-black">
+                          ICP MATCH
+                          <TrendingUp className="w-3 h-3" />
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
 
               {/* Policy card with connecting line - center */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -66,15 +72,20 @@ export function HeroSection() {
               </div>
 
               {/* Amount card - bottom left */}
-
-              <Card className="absolute bottom-32 left-16 bg-white rounded-md border border-gray-200 shadow-lg">
-                <CardContent className="p-2">
-                  <div className="bg-[#ff3c11]/20 px-2 py-1 rounded flex items-center gap-1 w-fit">
-                    <span className="text-xs text-black">CTO under 35</span>
-                    <TrendingDown className="w-2 h-2" />
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="absolute bottom-32 left-32">
+                <div className="relative">
+                  {/* Connecting line */}
+                  <div className="absolute -left-24 top-1/2 w-24 h-px bg-gradient-to-r from-transparent to-[#0f4f48]"></div>
+                  <Card className="bg-white rounded-md border border-gray-200 shadow-lg">
+                    <CardContent className="p-2">
+                      <div className="bg-[#ff3c11]/20 px-2 py-1 rounded flex items-center gap-1 w-fit">
+                        <span className="text-xs text-black">CTO under 35</span>
+                        <TrendingDown className="w-2 h-2" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             </div>
           </div>
 
