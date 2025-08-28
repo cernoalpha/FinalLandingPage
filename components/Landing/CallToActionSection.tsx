@@ -65,7 +65,7 @@ export function CallToActionSection(): JSX.Element {
                   {/* CTA buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button className="bg-[#4adf7d] hover:bg-[#4adf7d]/90 text-[#0f4f48] shadow-[0px_1px_2px_#1018280d] h-12 px-6 rounded [font-family:'Inter-Medium',Helvetica] font-medium text-base tracking-[0] leading-6">
-                      Start free trial
+                      Access dashboard
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
 
@@ -73,7 +73,7 @@ export function CallToActionSection(): JSX.Element {
                       variant="outline"
                       className="bg-white/20 hover:bg-white/30 border-white/40 text-[#0f4f48] backdrop-blur-sm h-12 px-6 rounded [font-family:'Inter-Medium',Helvetica] font-medium text-base tracking-[0] leading-6"
                     >
-                      Book a demo
+                      Book demo
                     </Button>
                   </div>
                 </div>

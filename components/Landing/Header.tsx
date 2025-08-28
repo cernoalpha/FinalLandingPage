@@ -47,7 +47,7 @@ export function Header(): JSX.Element {
             </div>
 
             <Button className="bg-[#4adf7d] hover:bg-[#4adf7d]/90 text-[#0f4f48] shadow-[0px_1px_2px_#1018280d] h-11 px-5 rounded [font-family:'Inter-Medium',Helvetica] font-medium text-[14.9px] tracking-[0] leading-6">
-              See a demo
+              Book demo
             </Button>
           </div>
         </div>
