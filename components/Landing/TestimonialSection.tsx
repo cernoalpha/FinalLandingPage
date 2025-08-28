@@ -291,7 +291,7 @@ export function TestimonialSection(): JSX.Element {
           transform: "translate(-50%, -50%)",
         }}
       >
-        <div className="relative w-[600px] h-[400px]">
+        <div className="relative w-[600px] h-[400px]" style={{ perspective: "1500px" }}>
           {cards.map((card, index) => (
             <motion.div
               key={index}
@@ -299,11 +299,13 @@ export function TestimonialSection(): JSX.Element {
               style={{
                 opacity: cardMotion[index].opacity,
                 rotateY: cardMotion[index].rotateY,
-                perspective: "1000px",
+                rotateX: cardTilts[index].x,
+                rotateZ: cardTilts[index].z,
+                translateZ: cardTilts[index].depth,
                 transformStyle: "preserve-3d",
               }}
             >
-              <Card className="w-full h-full bg-white border border-gray-300 shadow-md">
+              <Card className="w-full h-full bg-white border border-gray-300 shadow-lg" style={{ filter: `drop-shadow(0 ${4 + cardTilts[index].depth / 2}px ${8 + cardTilts[index].depth}px rgba(0,0,0,0.15))` }}>
                 <CardContent className="flex flex-col justify-center items-center p-8 h-full">
                   <p className="font-medium text-xl text-[#0f4f48] text-center mb-4">
                     “{card.quote}”
