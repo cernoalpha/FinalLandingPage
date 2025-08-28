@@ -14,7 +14,7 @@ export function HeroSection() {
   return (
     <section className="relative w-full mb-40">
       {/* Main hero container with grid structure */}
-      <div className="relative w-full h-screen border-t border-[#0f4f48]">
+      <div className="relative w-full h-[85vh] border-t border-[#0f4f48]">
         {/* Main content grid */}
         <div className="grid grid-cols-4 h-full">
           {/* Left section - Hero content with gradient background */}
@@ -35,11 +35,13 @@ export function HeroSection() {
 
             {/* Floating UI cards positioned within the gradient area */}
             <div className="absolute inset-0 pointer-events-none">
-              {/* Financial metrics card - top right */}
-              <div className="absolute top-20 right-16">
+              {/* Financial metrics card - aligned with first border */}
+              <div className="absolute top-[30%] right-56">
                 <div className="relative">
-                  {/* Connecting line */}
-                  <div className="absolute -left-16 top-1/2 w-16 h-px bg-gradient-to-r from-transparent to-[#0f4f48]"></div>
+                  {/* Horizontal connecting line to sidebar */}
+                  <div className="absolute -right-24 top-1/2 w-24 h-px bg-gradient-to-l from-transparent to-[#0f4f48]"></div>
+                  {/* Vertical connecting line */}
+                  <div className="absolute left-1/2 top-full w-px h-32 bg-gradient-to-b from-[#0f4f48] to-transparent"></div>
                   <Card className="w-40 bg-white rounded-md border border-gray-200 shadow-lg">
                     <CardContent className="p-3">
                       <div className="space-y-1">
@@ -53,11 +55,13 @@ export function HeroSection() {
                 </div>
               </div>
 
-              {/* Policy card with connecting line - center */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              {/* Policy card with connecting line - aligned with Bonhomia World bottom border */}
+              <div className="absolute top-[67%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div className="relative">
-                  {/* Connecting line */}
-                  <div className="absolute -left-24 top-1/2 w-24 h-px bg-gradient-to-r from-transparent to-[#0f4f48]"></div>
+                  {/* Connecting line to the right */}
+                  <div className="absolute -right-24 top-1/2 w-24 h-px bg-gradient-to-l from-transparent to-[#0f4f48]"></div>
+                  {/* Vertical connecting line */}
+                  <div className="absolute left-1/2 top-full w-px h-24 bg-gradient-to-b from-[#0f4f48] to-transparent"></div>
                   <Card className="bg-white rounded-md border border-gray-200 shadow-lg">
                     <CardContent className="p-2">
                       <div className="text-xs text-gray-600 mb-1">
@@ -76,6 +80,8 @@ export function HeroSection() {
                 <div className="relative">
                   {/* Connecting line */}
                   <div className="absolute -left-24 top-1/2 w-24 h-px bg-gradient-to-r from-transparent to-[#0f4f48]"></div>
+                  {/* Vertical connecting line */}
+                  <div className="absolute left-1/2 top-full w-px h-24 bg-gradient-to-b from-[#0f4f48] to-transparent"></div>
                   <Card className="bg-white rounded-md border border-gray-200 shadow-lg">
                     <CardContent className="p-2">
                       <div className="bg-[#ff3c11]/20 px-2 py-1 rounded flex items-center gap-1 w-fit">
