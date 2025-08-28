@@ -206,19 +206,19 @@ export function TestimonialSection(): JSX.Element {
     offset: ["start end", "end start"],
   });
 
-  // Curtains open later (0.15) after previous section, close earlier (0.8) before CTA
+  // Curtains open later (0.1) with more delay, close smoothly over longer duration
   const curtainScale = useTransform(
     scrollYProgress,
-    [0, 0.15, 0.8, 0.85],
+    [0, 0.1, 0.75, 0.9],
     [0, 1, 1, 0]
   );
 
-  // Card flip ranges: fourth card lasts longer (0.65–0.85)
+  // Card flip ranges: start after curtains open, end before they close
   const ranges: [number, number][] = [
     [0.2, 0.35],
     [0.35, 0.5],
     [0.5, 0.65],
-    [0.65, 0.85],
+    [0.65, 0.75],
   ];
 
   const cards = [
@@ -245,16 +245,24 @@ export function TestimonialSection(): JSX.Element {
     },
   ];
 
+  // 3D tilt configurations for each card
+  const cardTilts = [
+    { x: 0, z: 0, depth: 0 },           // Card 1: straight
+    { x: -5, z: 3, depth: 10 },         // Card 2: slight tilt
+    { x: 8, z: -4, depth: 15 },         // Card 3: more tilt
+    { x: -10, z: 6, depth: 20 },        // Card 4: maximum tilt
+  ];
+
   // Motion values for each card
   const cardMotion = ranges.map(([start, end]) => ({
     opacity: useTransform(scrollYProgress, [start, end], [0, 1]),
     rotateY: useTransform(scrollYProgress, [start, end], [-90, 0]),
   }));
 
-  // Container fades in at 0.2–0.25 and out at 0.85–0.9
+  // Container fades in after curtains open, fades out before curtains start closing
   const containerOpacity = useTransform(
     scrollYProgress,
-    [0.2, 0.25, 0.85, 0.9],
+    [0.15, 0.2, 0.75, 0.8],
     [0, 1, 1, 0]
   );
 
@@ -266,11 +274,11 @@ export function TestimonialSection(): JSX.Element {
       {/* Curtains */}
       <div className="fixed inset-0 z-0">
         <motion.div
-          className="absolute top-0 left-0 w-1/2 h-full bg-amber-500"
+          className="absolute top-0 left-0 w-1/2 h-full bg-[#FFC300]"
           style={{ scaleX: curtainScale, transformOrigin: "right center" }}
         />
         <motion.div
-          className="absolute top-0 right-0 w-1/2 h-full bg-yellow-500"
+          className="absolute top-0 right-0 w-1/2 h-full bg-[#FFC300]"
           style={{ scaleX: curtainScale, transformOrigin: "left center" }}
         />
       </div>
